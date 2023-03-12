@@ -110,28 +110,18 @@
                             <table border="0" cellpadding="0" cellspacing="0" width="100%">
                               <tr>
                                 <td align="left" class="header" valign="top">
-                                  <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="border-bottom: 1px solid #AEAEAE; min-width: 100%; " class="slot-styling"><tr><td style="padding-bottom: 20px; " class="slot-styling camarker-inner"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><script runat="server">
-    Platform.Load("Core","1");
-    
-    var emailName = Attribute.GetValue("emailname_");
-    
-    var generatedContentDE = DataExtension.Init("ChatGPTGeneratedContent");
-    var generatedContentRows = generatedContentDE.Rows.Lookup(["EmailName"], [emailName]);
-    
-    if (generatedContentRows.length == 0) {
-      Write("o")
-    }
-</script>
+                                  <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="border-bottom: 1px solid #AEAEAE; min-width: 100%; " class="slot-styling"><tr><td style="padding-bottom: 20px; " class="slot-styling camarker-inner"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
 </td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="text-align: center; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding-top: 10px; " class="stylingblock-content-wrapper camarker-inner" align="center"><table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="center"><img data-assetid="7969" src="http://image.S7.exacttarget.com/lib/fe8d13727c62017f76/m/1/d8e04903-769b-4d09-a8f1-0bb86992570d.png" alt="" height="62" width="200" style="display: block; height: 62px; width: 200px; text-align: center; padding: 0px;"></td></tr></table></td></tr></table></td></tr></table>
                                 </td>
                               </tr>
                               <tr>
                                 <td align="left" class="" valign="top">
-                                  <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="border-bottom: 1px solid #AEAEAE; min-width: 100%; " class="slot-styling"><tr><td style="padding-top: 10px; padding-bottom: 10px; " class="slot-styling camarker-inner"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">%%[
-set @variations = 5
-set @prompt = "Welcome to the FutbolShop store where you can find everything for your favorite soccer team"
-ContentBlockByName("Content Builder\Integrations\ChatGPT\ChatGPTGenerator")
-]%%
+                                  <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="border-bottom: 1px solid #AEAEAE; min-width: 100%; " class="slot-styling"><tr><td style="padding-top: 10px; padding-bottom: 10px; " class="slot-styling camarker-inner"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+                                    %%[
+                                    set @variations = 5
+                                    set @prompt = "Welcome to the FutbolShop store where you can find everything for your favorite soccer team"
+                                    ]%%
+                                    %%=ContentBlockByName("Content Builder\Integrations\ChatGPT\ChatGPTGenerator")=%%
 <div style="text-align: center;">
  <font color="#2c3e50"><span style="font-size: 26px;"><b>%%=v(@generatedContent)=%%</b></span></font></div>&nbsp;<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
  
