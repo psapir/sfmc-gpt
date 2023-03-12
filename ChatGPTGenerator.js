@@ -17,7 +17,7 @@
         var contentType = 'application/json';
         var payload = '{ "model": "text-davinci-003", "prompt": "Write "+ variations +" alternatives for this text separated by |: "+prompt, "temperature": 0.7, "max_tokens": 256 }';
         var headerNames = ["Authorization"];
-        var headerValues = ["Bearer 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"];
+        var headerValues = ["Bearer YOUR_CHATGPT_API_HERE"];
         var result = HTTP.Post(url, "application/json", payload, headerNames, headerValues);
     
         var jsonResult = Platform.Function.ParseJSON(result.Response[0]);
