@@ -25,7 +25,7 @@
         var resultsArray = jsonResult.choices[0].text.split("|");
         
         for (i = 0; i < resultsArray.length; i++) {
-           generatedContentRows.push({EmailName:emailName,Variation:i+1,GeneratedText:resultsArray[i].replace(/[\\n\.]/gi,"")});
+           generatedContentRows.push({EmailName:emailName,Variation:i+1,GeneratedText:resultsArray[i]});
 
         }
         
