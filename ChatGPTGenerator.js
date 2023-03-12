@@ -1,11 +1,11 @@
 <script runat=server>
     Platform.Load("Core","1");
-    
-   try{
     var variations = Variable.GetValue("@variations");
     var prompt = Variable.GetValue("@prompt");
     var emailName = Attribute.GetValue("emailname_");
-  
+    
+   try{
+    
     if(!variations) variations = 5;
   
     var generatedContentDE = DataExtension.Init("ChatGPTGeneratedContent");
@@ -25,7 +25,7 @@
         var resultsArray = jsonResult.choices[0].text.split("|");
         
         for (i = 0; i < resultsArray.length; i++) {
-           generatedContentRows.push({EmailName:emailName,Variation:i+1,GeneratedText:resultsArray[i].replaceAll('\\n','')});
+           generatedContentRows.push({EmailName:emailName,Variation:i+1,GeneratedText:resultsArray[i].replace(/[\\n\.]/gi,"")});
 
         }
         
