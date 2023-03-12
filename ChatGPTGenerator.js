@@ -15,7 +15,7 @@
        generatedContentRows = [];
         var url = 'https://api.openai.com/v1/completions';
         var contentType = 'application/json';
-        var payload = '{ "model": "text-davinci-003", "prompt": "Write '+ variations +' alternatives for this text separated by |: '+prompt+'", "temperature": 0.7, "max_tokens": 256 }';
+        var payload = '{ "model": "text-davinci-003", "prompt": "Write '+ variations +' alternatives for this text separated by | without including the original one: '+prompt+'", "temperature": 0.7, "max_tokens": 256 }';
         var headerNames = ["Authorization"];
         var headerValues = ["Bearer YOUR_CHATGPT_API_HERE"];
         var result = HTTP.Post(url, "application/json", payload, headerNames, headerValues);
