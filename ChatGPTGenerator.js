@@ -8,7 +8,7 @@
    try{
     
     if(!variations) variations = 5;
-    if(!maxTokens) maxTokens = 30;
+    if(!maxTokens) maxTokens = 256;
   
     var generatedContentDE = DataExtension.Init("ChatGPTGeneratedContent");
     var generatedContentRows = generatedContentDE.Rows.Lookup(["EmailName"], [emailName]);
