@@ -38,7 +38,7 @@
     var variation = Math.floor(Math.random() * variations) ;
     var text = generatedContentRows[variation].GeneratedText;
      Variable.SetValue("@generatedContent", text);
-     Variable.SetValue("@generatedContentAlias", emailName + "-" + variation);
+     Variable.SetValue("@generatedContentAlias", emailName + "-" + variation+1);
     } 
     catch(e){
       Variable.SetValue("@generatedContent", prompt);
