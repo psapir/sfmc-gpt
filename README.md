@@ -21,4 +21,4 @@ This repo showcases an example on how to incorporate ChatGPT API generated conte
 ##### Step 3. Incorporate ChatGPT in your emails!
 
 1. Follow the example email file to incorporate ChatGPT into your emails
-2. More instructions can be found here: tbc
+2. More instructions can be found here: https://www.devsutd.com/instant-content-generation-in-salesforce-marketing-cloud-with-chatgpt
